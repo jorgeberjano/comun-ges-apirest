@@ -23,7 +23,7 @@ public class ServicioMetadatos implements IServicioMetadatos {
     @Override
     public String getMetadatosConsultasJson(String idioma) {
         List<ConsultaGes> consultas = servicioGes.getConsultas(idioma);
-        if (consultas == null) {         
+        if (consultas == null || consultas.size() == 0) {         
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No se han definido consultas");
         }
         
@@ -34,7 +34,7 @@ public class ServicioMetadatos implements IServicioMetadatos {
     public String getMetadatosConsultaJson(String idioma, String idConsulta) {
         ConsultaGes consulta = servicioGes.getConsultaPorId(idioma, idConsulta);
         if (consulta == null) {         
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Existe la consulta " + idConsulta);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No existe la consulta " + idConsulta);
         }
         
         return servicioJson.toJson(consulta);

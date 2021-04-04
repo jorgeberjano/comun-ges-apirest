@@ -41,6 +41,7 @@ public class ServicioGes implements IServicioGes {
     public ServicioGes() {
     }
     
+    @Override
     public void inicializarConexion(String driverClass, String url, String username, String password) {    
         
         gestorConexiones = new PoolConexiones(driverClass, url, username, password, true);
