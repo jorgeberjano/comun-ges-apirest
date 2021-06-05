@@ -23,7 +23,7 @@ import es.jbp.comun.ges.serializacion.SerializadorGes;
 import es.jbp.comun.ges.serializacion.SerializadorGesJson;
 
 /**
- * Servicio que proporciona las conexiones a la BD y los metadatos segun el idioma.
+ * Servicio que proporciona los metadatos segun el idioma.
  * @author jberjano
  */
 @Service
@@ -33,25 +33,7 @@ public class ServicioGes implements IServicioGes {
     private final Map<String, IServicioPersonalizado> mapaServiciosPersonalizados = new HashMap<>();
     private final IServicioPersonalizado manipuladorNulo = new ServicioPersonalizadoBase();    
     private IConversorValores conversorValores = new ConversorValoresBase();
-
-    private PoolConexiones gestorConexiones;
-
     private final Map<String, Ges> mapaGestores = new HashMap<>();   
-
-    public ServicioGes() {
-    }
-    
-    @Override
-    public void inicializarConexion(String driverClass, String url, String username, String password) {    
-        
-        gestorConexiones = new PoolConexiones(driverClass, url, username, password, true);
-
-        try {
-            gestorConexiones.inicializar();
-        } catch (ClassNotFoundException ex) {
-            GestorLog.error("No se ha podido inicializar el gestor de conexiones", ex);
-        }
-    }
     
     @Override
     public void crearGestor(String idioma, String archivoGes, Map<String, Object> mapaSimbolos) {
@@ -101,10 +83,6 @@ public class ServicioGes implements IServicioGes {
             return null;
         }
         return gestor.getConsultaPorId(idConsulta);
-    }
-
-    public GestorConexiones getGestorConexiones() {
-        return gestorConexiones;
     }
 
     @Override

@@ -57,13 +57,14 @@ public class ServicioEntidad implements IServicioEntidad {
 
     @Autowired
     private IServicioJson servicioJson;
-
+    
+    @Autowired IServicioConexion servicioConexiones;
 
     @Override
     public void asignarConsulta(String idioma, String idConsulta) {
         this.idioma = idioma;
         consulta = servicioGes.getConsultaPorId(idioma, idConsulta);
-        GestorConexiones gestorConexiones = servicioGes.getGestorConexiones();
+        GestorConexiones gestorConexiones = servicioConexiones.getGestorConexiones();
         GestorSimbolos gestorSimbolos = servicioGes.getGestorSimbolos(idioma);
         accesoEntidadesGes = new AccesoEntidadesGes(consulta, gestorConexiones, gestorSimbolos);
         personalizadorEntidades = servicioGes.obtenerServicioPersonalizado(idConsulta);
@@ -199,29 +200,6 @@ public class ServicioEntidad implements IServicioEntidad {
     public String getEntidadesJson() {
         return serializar(getListaEntidades());
     }
-
-//    @Override
-//    public String getEntidadJson(String... valoresClave) {
-//        if (consulta == null) {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, CONSULTA_NO_EXISTE);
-//        }
-//        if (valoresClave == null) {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, ENTIDAD_NO_EXISTE);
-//        }
-//
-//        ClavePrimaria clave = consulta.construirClavePrimaria(valoresClave);
-//        if (clave == null) {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, CLAVE_NO_VALIDA);
-//        }
-//        EntidadGes entidad = accesoEntidadesGes.getEntidad(clave);
-//        if (accesoEntidadesGes.huboError()) {
-//            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, accesoEntidadesGes.getMensajeCompletoError());
-//        }
-//        if (entidad == null) {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, ENTIDAD_NO_EXISTE);
-//        }
-//        return serializar(entidad);
-//    }
 
     private String serializar(EntidadGes entidad) {
 
