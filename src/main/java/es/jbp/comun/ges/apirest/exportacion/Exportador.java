@@ -1,6 +1,6 @@
 package es.jbp.comun.ges.apirest.exportacion;
 
-import es.jbp.comun.ges.dao.EntidadGes;
+import es.jbp.comun.ges.entidad.EntidadGes;
 import es.jbp.comun.ges.entidad.ConsultaGes;
 import java.io.OutputStream;
 import java.util.List;

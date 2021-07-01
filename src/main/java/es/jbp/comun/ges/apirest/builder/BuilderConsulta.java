@@ -1,7 +1,7 @@
 package es.jbp.comun.ges.apirest.builder;
 
 import es.jbp.comun.ges.apirest.servicio.ServicioEntidad;
-import es.jbp.comun.ges.dao.EntidadGes;
+import es.jbp.comun.ges.entidad.EntidadGes;
 import es.jbp.comun.ges.entidad.CampoGes;
 import es.jbp.comun.ges.filtroyorden.CondicionOrden;
 import es.jbp.comun.ges.filtroyorden.CondicionSimpleFiltro;

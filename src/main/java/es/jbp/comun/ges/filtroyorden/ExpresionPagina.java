@@ -1,6 +1,7 @@
 package es.jbp.comun.ges.filtroyorden;
 
-import es.jbp.comun.ges.dao.Pagina;
+import es.jbp.comun.ges.entidad.Pagina;
+
 
 /**
  * Expresion de pagina para obtener entidades.

@@ -6,8 +6,7 @@ import es.jbp.comun.ges.entidad.Ges;
 import es.jbp.comun.ges.serializacion.SerializadorGesXml;
 import es.jbp.comun.ges.utilidades.GestorSimbolos;
 import es.jbp.comun.utiles.depuracion.GestorLog;
-import es.jbp.comun.utiles.sql.GestorConexiones;
-import es.jbp.comun.utiles.sql.PoolConexiones;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

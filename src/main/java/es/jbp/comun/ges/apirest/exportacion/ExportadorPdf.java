@@ -17,7 +17,7 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfPageEventHelper;
 import com.itextpdf.text.pdf.PdfWriter;
-import es.jbp.comun.ges.dao.EntidadGes;
+import es.jbp.comun.ges.entidad.EntidadGes;
 import es.jbp.comun.ges.entidad.CampoGes;
 import es.jbp.comun.ges.entidad.ConsultaGes;
 import static es.jbp.comun.ges.entidad.ConsultaGes.CONSIMPR_ORIENTACION_HORIZONTAL;

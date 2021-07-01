@@ -1,7 +1,7 @@
 package es.jbp.comun.ges.apirest.recursos;
 
 import es.jbp.comun.ges.apirest.servicio.IServicioEntidad;
-import es.jbp.comun.ges.dao.ClavePrimaria;
+import es.jbp.comun.ges.entidad.ClavePrimaria;
 import es.jbp.comun.utiles.conversion.Conversion;
 import es.jbp.comun.utiles.sql.PaginaEntidades;
 import io.swagger.v3.oas.annotations.Operation;
@@ -33,7 +33,7 @@ public class RecursoEntidades {
 //    @Context
 //    private UriInfo context;
     @Autowired
-    IServicioEntidad servicio;
+IServicioEntidad servicio;
 
     /**
      * Creates a new instance of RecursoEntidad

@@ -2,7 +2,7 @@ package es.jbp.comun.ges.apirest.personalizacion;
 
 import es.jbp.comun.ges.apirest.servicio.OperacionCrud;
 import es.jbp.comun.ges.apirest.servicio.ServicioEntidad;
-import es.jbp.comun.ges.dao.EntidadGes;
+import es.jbp.comun.ges.entidad.EntidadGes;
 
 /**
  * Contrato para los manipuladores de entidades.

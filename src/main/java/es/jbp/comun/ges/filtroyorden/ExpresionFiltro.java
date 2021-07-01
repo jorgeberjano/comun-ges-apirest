@@ -1,6 +1,6 @@
 package es.jbp.comun.ges.filtroyorden;
 
-import es.jbp.comun.ges.dao.Filtro;
+import es.jbp.comun.ges.entidad.Filtro;
 import es.jbp.comun.ges.entidad.ConsultaGes;
 import es.jbp.comun.utiles.sql.compatibilidad.FormateadorSql;
 import es.jbp.comun.ges.apirest.personalizacion.IConversorValores;

@@ -1,10 +1,11 @@
 package es.jbp.comun.ges.apirest.servicio;
 
+import es.jbp.comun.ges.apirest.builder.BuilderConsulta;
 import es.jbp.comun.ges.apirest.exportacion.Exportador;
 import es.jbp.comun.ges.apirest.exportacion.FactoriaExportadores;
 import es.jbp.comun.ges.dao.AccesoEntidadesGes;
-import es.jbp.comun.ges.dao.ClavePrimaria;
-import es.jbp.comun.ges.dao.EntidadGes;
+import es.jbp.comun.ges.entidad.ClavePrimaria;
+import es.jbp.comun.ges.entidad.EntidadGes;
 import es.jbp.comun.ges.entidad.CampoGes;
 import es.jbp.comun.ges.entidad.ConsultaGes;
 import es.jbp.comun.ges.filtroyorden.CondicionOrden;
@@ -29,7 +30,6 @@ import java.io.OutputStream;
 import org.springframework.context.annotation.Scope;
 import es.jbp.comun.ges.apirest.personalizacion.IConversorValores;
 import es.jbp.comun.ges.apirest.personalizacion.IServicioPersonalizado;
-import es.jbp.comun.ges.apirest.builder.BuilderConsulta;
 import es.jbp.comun.utiles.sql.TipoDato;
 
 /**
@@ -403,7 +403,7 @@ public class ServicioEntidad implements IServicioEntidad {
         borrarEntidad(clave);
     }
     
-    public BuilderConsulta builder() {        
+    public BuilderConsulta builder() {
         return new BuilderConsulta(this);//consulta, conversorValores);
     }
 

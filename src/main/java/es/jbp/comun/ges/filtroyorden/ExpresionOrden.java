@@ -1,7 +1,7 @@
 package es.jbp.comun.ges.filtroyorden;
 
-import es.jbp.comun.ges.dao.Orden;
 import es.jbp.comun.ges.entidad.ConsultaGes;
+import es.jbp.comun.ges.entidad.Orden;
 import es.jbp.comun.utiles.sql.compatibilidad.FormateadorSql;
 import java.util.ArrayList;
 import java.util.List;

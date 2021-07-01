@@ -1,6 +1,6 @@
 package es.jbp.comun.ges.apirest.personalizacion;
 
-import es.jbp.comun.ges.dao.EntidadGes;
+import es.jbp.comun.ges.entidad.EntidadGes;
 import es.jbp.comun.ges.entidad.CampoGes;
 
 

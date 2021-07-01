@@ -1,10 +1,10 @@
     package es.jbp.comun.ges.apirest.servicio;
 
-import es.jbp.comun.ges.dao.ClavePrimaria;
-import es.jbp.comun.ges.dao.EntidadGes;
-import es.jbp.comun.ges.dao.MapaValores;
+import es.jbp.comun.ges.entidad.ClavePrimaria;
+import es.jbp.comun.ges.entidad.EntidadGes;
 import es.jbp.comun.ges.entidad.CampoGes;
 import es.jbp.comun.ges.entidad.ConsultaGes;
+import es.jbp.comun.ges.entidad.MapaValores;
 import es.jbp.comun.utiles.conversion.Conversion;
 import java.util.List;
 import org.json.JSONArray;

@@ -1,7 +1,7 @@
 package es.jbp.comun.ges.apirest.servicio;
 
-import es.jbp.comun.ges.dao.ClavePrimaria;
-import es.jbp.comun.ges.dao.EntidadGes;
+import es.jbp.comun.ges.entidad.ClavePrimaria;
+import es.jbp.comun.ges.entidad.EntidadGes;
 import es.jbp.comun.ges.entidad.ConsultaGes;
 import es.jbp.comun.ges.apirest.builder.BuilderConsulta;
 import es.jbp.comun.ges.filtroyorden.ExpresionFiltro;
